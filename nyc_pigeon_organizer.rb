@@ -39,4 +39,3 @@ def nyc_pigeon_organizer(data)
   #Return new hash.
 
  end	
- end
