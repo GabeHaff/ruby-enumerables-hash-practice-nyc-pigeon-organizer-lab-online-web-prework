@@ -22,18 +22,18 @@ def nyc_pigeon_organizer(data)
          if !bird_hash[name][keys]
         # If this is falsey then move to next statement.
 
-           new_hash[name][keys] = []
+           bird_hash[name][keys] = []
           # If an array for that desired value does not exist yet (won't on first iteration), create an empty array.
 
          end
 
-         new_hash[name][keys] << k2.to_s
+         bird_hash[name][keys] << k2.to_s
         # Turn kk (originally the :color keys) into a string and add to the end of the relevant item in iteration.
 
        end
     end
   end
 
-   new_hash
+   bird_hash
 
  end	
