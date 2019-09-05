@@ -1,34 +1,33 @@
 def nyc_pigeon_organizer(data)
   # write your code here!	 
-  new_hash = {}
-  # Empty hash to store results.
+  bird_hash = {}
 
-   data.each do |k, v|
+   data.each do |keys, values|
   # K & v iterate through data.
 
-     v.each do |kk, vv|
+     values.each do |k2, v2|
     # Kk & vv iterate through v.
 
-       vv.each do |name|
+       v2.each do |name|
       # Name iterates through vv.
 
-         if !new_hash[name]
+         if !bird_hash[name]
         # If this is falsey then move to next statement.
 
-           new_hash[name] = {}
+           bird_hash[name] = {}
           # If a hash for that desired name key does not exist yet (won't on first iteration), create an empty hash.
 
          end
 
-         if !new_hash[name][k]
+         if !bird_hash[name][keys]
         # If this is falsey then move to next statement.
 
-           new_hash[name][k] = []
+           new_hash[name][keys] = []
           # If an array for that desired value does not exist yet (won't on first iteration), create an empty array.
 
          end
 
-         new_hash[name][k] << kk.to_s
+         new_hash[name][keys] << k2.to_s
         # Turn kk (originally the :color keys) into a string and add to the end of the relevant item in iteration.
 
        end
@@ -36,6 +35,5 @@ def nyc_pigeon_organizer(data)
   end
 
    new_hash
-  #Return new hash.
 
  end	
