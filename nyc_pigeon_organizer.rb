@@ -1,5 +1,6 @@
 def nyc_pigeon_organizer(data)
-  # write your code here!	  new_hash = {}
+  # write your code here!	 
+  new_hash = {}
   # Empty hash to store results.
 
    data.each do |k, v|
